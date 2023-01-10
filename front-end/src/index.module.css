@@ -1,0 +1,8 @@
+.noChakra {
+    all: revert;
+}
+
+.noChakra * {
+    all: revert;
+  }
+  
