@@ -1,6 +1,7 @@
 import { Action, ThunkAction, configureStore } from "@reduxjs/toolkit";
 
 import exampleReducer from "../static_module/main/features/example/exampleSlice";
+
 export const store = configureStore({
     reducer: {
         example: exampleReducer

@@ -1,5 +1,3 @@
-
-
 export default function ResourcesMainModule() {
     return (
         <div>

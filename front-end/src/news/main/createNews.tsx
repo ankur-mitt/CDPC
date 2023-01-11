@@ -1,35 +1,20 @@
-import {
-    Box,
-    Button,
-    ButtonGroup,
-    Container,
-    Flex,
-    Heading
-} from "@chakra-ui/react";
+import { Box, Button, ButtonGroup, Heading } from "@chakra-ui/react";
 import { useToast } from "@chakra-ui/react";
 import MarkdownIt from "markdown-it";
-import { useState } from "react";
 import MdEditor from "react-markdown-editor-lite";
 import "react-markdown-editor-lite/lib/index.css";
 
-import MarkdownTypes from "../types";
-import ErrorTypes from "../types";
+import { MarkdownTypes } from "../types";
 import NewsCreateRules from "./rules";
 
 const mdParser = new MarkdownIt(/* Markdown-it options */);
 
 const NewsCreateModule = () => {
     const toast = useToast();
-    const [Html, setHtml] = useState<string>("");
-    const [Error, setError] = useState<ErrorTypes>({
-        error: false,
-        message: ""
-    });
     const handleChange = ({ html, text }: MarkdownTypes) => {
         console.log(text);
-        setHtml(text ? text : "");
     };
-    const handleImageUpload = (file: any) => {
+    const handleImageUpload = (file: File) => {
         const MIN_FILE_SIZE = 50; // 50kb
         const MAX_FILE_SIZE = 1024; // 1MB
         const fileSizeKiloBytes = file.size / 1024;
@@ -57,8 +42,8 @@ const NewsCreateModule = () => {
         }
         return new Promise((resolve) => {
             const reader = new FileReader();
-            reader.onload = (data: any) => {
-                resolve(data.target.result);
+            reader.onload = (data: ProgressEvent<FileReader>) => {
+                resolve(data.target?.result);
             };
             reader.readAsDataURL(file);
             toast({

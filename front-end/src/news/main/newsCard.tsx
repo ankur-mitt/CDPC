@@ -7,12 +7,11 @@ import {
     Divider,
     HStack,
     Heading,
-    Image,
     Stack,
     Tag,
     Text
 } from "@chakra-ui/react";
-import { Skeleton, SkeletonCircle, SkeletonText } from "@chakra-ui/react";
+import { Skeleton } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 
 const NewsCard = ({ isLoaded }: { isLoaded: boolean }) => {

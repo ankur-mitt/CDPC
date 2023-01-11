@@ -3,9 +3,6 @@ import {
     Box,
     Button,
     FormControl,
-    FormErrorMessage,
-    FormHelperText,
-    FormLabel,
     Input,
     Menu,
     MenuButton,
@@ -15,24 +12,11 @@ import {
     MenuOptionGroup,
     Spinner
 } from "@chakra-ui/react";
-import MarkdownIt from "markdown-it";
-import { useState } from "react";
-import { useRef } from "react";
-import MdEditor from "react-markdown-editor-lite";
 import "react-markdown-editor-lite/lib/index.css";
 
-import MarkdownTypes from "../types";
 import NewsCard from "./newsCard";
 
-const mdParser = new MarkdownIt(/* Markdown-it options */);
-
 const NewsMainModule = () => {
-    const [Html, setHtml] = useState<string>("");
-    const handleChange = ({ html, text }: MarkdownTypes) => {
-        console.log(text);
-        setHtml(text ? text : "");
-    };
-    const isError = false;
     return (
         <>
             <Box
@@ -47,7 +31,7 @@ const NewsMainModule = () => {
                     alignItems: "center"
                 }}
             >
-                <FormControl isInvalid={isError} maxW={"88%"}>
+                <FormControl isInvalid={false} maxW={"88%"}>
                     {/* <FormLabel>Email</FormLabel> */}
                     <Input
                         type="email"

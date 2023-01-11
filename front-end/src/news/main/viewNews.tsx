@@ -1,11 +1,4 @@
-import {
-    Box,
-    Button,
-    ButtonGroup,
-    Container,
-    Flex,
-    Heading
-} from "@chakra-ui/react";
+import { Box, Button, ButtonGroup } from "@chakra-ui/react";
 import MarkdownIt from "markdown-it";
 import { useEffect, useState } from "react";
 import MdEditor from "react-markdown-editor-lite";
