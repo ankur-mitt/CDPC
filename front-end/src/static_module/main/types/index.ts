@@ -1,1 +1,1 @@
-export type { TeamMemberInfoType } from './team'
+export type { TeamMemberInfoType } from "./team";

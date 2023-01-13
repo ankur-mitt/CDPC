@@ -1,4 +1,3 @@
-
 export default function PlacementsMainModule() {
     return (
         <div>
