@@ -12,7 +12,7 @@ export default function TeamMember({
     const { name, designation, emailID, imgLink, contactNumber } = memberInfo;
 
     return (
-        <Card maxW="sm">
+        <Card size="sm">
             <CardBody>
                 <Stack direction="column" align="center">
                     <Image

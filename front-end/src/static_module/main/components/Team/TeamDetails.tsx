@@ -1,25 +1,9 @@
 import { Box, Spinner, Text, Wrap, WrapItem } from "@chakra-ui/react";
-import { useEffect, useState } from "react";
-
-import { TeamMemberInfoType } from "../../types";
+import { useGetTeamDetails } from "../../hooks";
 import TeamMember from "./TeamMember";
 
 export default function TeamDetails() {
-    const [isLoading, setIsLoading] = useState<boolean>(true);
-    const [teamDetails, setTeamDetails] = useState<TeamMemberInfoType[]>([]);
-
-    useEffect(() => {
-        fetch("https://jsonplaceholder.typicode.com/users")
-            .then((response) => response.json())
-            .then((data) => {
-                setTeamDetails(data);
-                setIsLoading(false);
-            })
-            .catch((err) => {
-                console.log(err);
-                setIsLoading(false);
-            });
-    }, []);
+    const {isLoading, teamDetails} = useGetTeamDetails();
 
     return (
         <Box>
