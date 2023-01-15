@@ -1,6 +1,7 @@
-import {useState, useEffect} from 'react';
-import { getTeamDetails } from '../services';
-import { TeamMemberInfoType } from '../types';
+import { useEffect, useState } from "react";
+
+import { getTeamDetails } from "../services";
+import { TeamMemberInfoType } from "../types";
 
 export function useGetTeamDetails() {
     const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -19,5 +20,4 @@ export function useGetTeamDetails() {
     }, []);
 
     return { isLoading, teamDetails };
-
 }

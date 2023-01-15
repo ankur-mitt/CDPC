@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
-import TeamDetails from "../static_module/main/components/Team/TeamDetails";
 
+import TeamDetails from "../static_module/main/components/Team/TeamDetails";
 
 const TestModule = () => {
     return (

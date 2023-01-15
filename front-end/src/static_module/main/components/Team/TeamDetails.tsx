@@ -1,9 +1,10 @@
 import { Box, Spinner, Text, Wrap, WrapItem } from "@chakra-ui/react";
+
 import { useGetTeamDetails } from "../../hooks";
 import TeamMember from "./TeamMember";
 
 export default function TeamDetails() {
-    const {isLoading, teamDetails} = useGetTeamDetails();
+    const { isLoading, teamDetails } = useGetTeamDetails();
 
     return (
         <Box>
