@@ -12,8 +12,6 @@ export const exampleSlice = createSlice({
     }
 });
 
-export const {
-    setExampleAction
-} = exampleSlice.actions;
+export const { setExampleAction } = exampleSlice.actions;
 
 export default exampleSlice.reducer;
