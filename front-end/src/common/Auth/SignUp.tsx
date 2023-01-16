@@ -1,8 +1,14 @@
 import { Button, FormControl, FormLabel, Input } from "@chakra-ui/react";
 import React, { useState } from "react";
+import { signup_api } from "../API/Access";
 
-export const Login = () => {
-    const [UserInfo, setUserInfo] = useState({ email: "", password: "" });
+export const SignUp = () => {
+    const [UserInfo, setUserInfo] = useState({
+        name: "",
+        email: "",
+        mobile_num: "",
+        password: ""
+    });
 
     const handlechange = (e: any) => {
         setUserInfo({ ...UserInfo, [e.target.type]: e.target.value });
@@ -10,14 +16,27 @@ export const Login = () => {
 
     const handleSubmit = (e: any) => {
         e.preventDefault();
-        console.log(UserInfo);
+        
+        const res=signup_api(UserInfo.name,UserInfo.email,UserInfo.mobile_num,UserInfo.password);
+        console.log(res);
     };
 
     return (
         <div>
+            
             <FormControl>
-                <FormLabel>Email address</FormLabel>
+                <FormLabel>Name</FormLabel>
+                <Input type="name" onChange={handlechange} />
+            </FormControl>
+
+            <FormControl>
+                <FormLabel>Email Address</FormLabel>
                 <Input type="email" onChange={handlechange} />
+            </FormControl>
+
+            <FormControl>
+                <FormLabel>Mobile Number</FormLabel>
+                <Input type="mobile_num" onChange={handlechange} />
             </FormControl>
 
             <FormControl>
