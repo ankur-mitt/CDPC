@@ -9,4 +9,13 @@ interface TodoType {
     id: Key
 }
 
-export type { TodoType };
+interface Resource {
+    company: string, 
+    year: string, 
+    role: string, 
+    type: string, 
+    resourcetype: string, 
+    name: string
+}
+
+export type { TodoType, Resource };

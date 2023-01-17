@@ -2,7 +2,7 @@ import { DeleteIcon, SearchIcon } from "@chakra-ui/icons";
 import { ButtonGroup, Flex, IconButton, Spacer } from "@chakra-ui/react";
 import Dropdown from "../../common/dropdown";
 import { company, jobType, profile, resourceType, year } from "../../data/filters";
-import "../styles/filterBar.css";
+import "../styles/filterbar.css";
 
 export default function FilterBar() {
     return (
