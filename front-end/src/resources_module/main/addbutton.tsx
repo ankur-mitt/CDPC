@@ -1,7 +1,7 @@
 import { AddIcon } from "@chakra-ui/icons";
 import { IconButton, Tooltip } from "@chakra-ui/react";
 
-import "../styles/addbutton.css";
+import "../styles/resourcemodule.css";
 
 export default function AddButton() {
     return (

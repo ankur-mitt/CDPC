@@ -1,0 +1,50 @@
+.add-button {
+    position: fixed !important;
+    bottom: 20px !important;
+    right: 20px !important;
+    border-radius: 50% !important;
+    width: 50px !important;
+    height: 50px !important;
+}
+
+.add-icon {
+    width: 20px !important;
+    height: 20px !important;
+}
+
+.filter-bar {
+    padding: 15px;
+}
+
+.resources-grid {
+    padding: 20px 15px 15px 15px;
+}
+
+.card-footer {
+    margin: 0% 0% 5% 5% !important;
+}
+
+.resource-fields-bar {
+    padding: 15px;
+}
+
+.resource-content {
+    margin: 15px;
+}
+
+.upload-resource-div {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    padding: 0 10px 10px 0;
+}
+
+.resource-content-heading {
+    padding: 10px 0 0 15px !important;
+}
+
+.submit-button {
+    position: fixed !important;
+    bottom: 20px !important;
+    right: 20px !important;
+}

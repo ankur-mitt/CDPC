@@ -1,7 +1,7 @@
 import { SimpleGrid } from "@chakra-ui/react";
 
 import { Resource } from "../../types";
-import "../styles/resources.css";
+import "../styles/resourcemodule.css";
 import ResourceCard from "./resourcecard";
 
 export default function Resources({

@@ -9,7 +9,7 @@ import {
     resourceType,
     year
 } from "../../data/filters";
-import "../styles/filterbar.css";
+import "../styles/resourcemodule.css";
 
 export default function FilterBar() {
     return (
