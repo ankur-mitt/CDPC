@@ -1,9 +1,17 @@
+import { Divider } from "@chakra-ui/react";
 
+import { resources } from "../../data/resources";
+import AddButton from "./addbutton";
+import FilterBar from "./filterbar";
+import Resources from "./resources";
 
 export default function ResourcesMainModule() {
     return (
         <div>
-            <h1>Resources Main Module</h1>
+            <FilterBar />
+            <Divider />
+            <Resources resourceList={resources} />
+            <AddButton />
         </div>
     );
 }

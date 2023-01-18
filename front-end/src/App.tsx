@@ -1,3 +1,4 @@
+import { ChakraProvider } from "@chakra-ui/react";
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 
@@ -9,11 +10,13 @@ import StaticModule from "./static_module";
 
 function App() {
     return (
-        <Routes>
-            <Route path="/placements/*" element={<PlacementsModule />} />
-            <Route path="/resources/*" element={<ResourcesModule />} />
-            <Route path="/static/*" element={<StaticModule />} />
-        </Routes>
+        <ChakraProvider>
+            <Routes>
+                <Route path="/placements/*" element={<PlacementsModule />} />
+                <Route path="/resources/*" element={<ResourcesModule />} />
+                <Route path="/static/*" element={<StaticModule />} />
+            </Routes>
+        </ChakraProvider>
     );
 }
 
