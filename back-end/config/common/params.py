@@ -17,6 +17,17 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    #included apps
+    'rest_framework',
+    #created apps
+    'basemodel',
+    'resources',
+    'department',
+    'degree',
+    'branch',
+    'placementdata',
+    'placement_course_wise_data',
+    'calender',
 ]
 
 MIDDLEWARE = [
