@@ -1,19 +1,27 @@
 import { Button, FormControl, FormLabel, Input } from "@chakra-ui/react";
 import React, { useState } from "react";
+
+import { useAppDispatch } from "../../app/hooks";
+
+import { loginAction } from "./features/loginSlice";
+
 import { login_api } from "../API/Access";
 
 export const Login = () => {
-    const [UserInfo, setUserInfo] = useState({ email: "", password: "" });
+
+    const [Userdetails, setUserdetails] = useState({ email: "", password: "" });
+
+    const dispatch = useAppDispatch();
 
     const handlechange = (e: any) => {
-        setUserInfo({ ...UserInfo, [e.target.type]: e.target.value });
+        setUserdetails({ ...Userdetails, [e.target.type]: e.target.value });
     };
 
     const handleSubmit = (e: any) => {
         e.preventDefault();
         
-        const res=login_api(UserInfo.email, UserInfo.password);
-        console.log(res);
+        // const res=login_api(Userdetails.email, Userdetails.password);
+        dispatch(loginAction(Userdetails));
     };
 
     return (
