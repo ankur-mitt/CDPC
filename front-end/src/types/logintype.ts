@@ -1,7 +1,7 @@
 interface LoginType {
-    islogin:boolean,
-    // user:string,
-    // token:string,
+    islogin: boolean;
+    user: String;
+    token: String;
 }
 
 export type { LoginType };
