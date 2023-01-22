@@ -3,7 +3,7 @@ import React, { useState } from "react";
 
 import { useAppDispatch } from "../../app/hooks";
 
-import { loginAction } from "./features/loginSlice";
+import { loginAction } from "../../features/login/loginSlice";
 
 import { login_api } from "../API/Access";
 
@@ -18,9 +18,8 @@ export const Login = () => {
     };
 
     const handleSubmit = (e: any) => {
-        e.preventDefault();
-        
-        // const res=login_api(Userdetails.email, Userdetails.password);
+        // e.preventDefault();
+
         dispatch(loginAction(Userdetails));
     };
 

@@ -1,24 +1,25 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 
+import { LoginType } from "../../types/logintype";
+
+const initialState: LoginType = {
+    islogin: false,
+};
 
 export const loginSlice = createSlice({
     name: "login",
-    initialState: {
-        isLogin: false,
-        // user: null,
-        // token: null,
-    },
+    initialState,
     reducers: {
         loginAction: (state, action: PayloadAction<any>) => {
-            console.log(action.payload);
-            state.isLogin = true;
-            // state.user = action.payload.email;
+            state.islogin = true;
+            // console.log("loginAction: ", action.payload);
+            // state.user = action.payload.user;
             // state.token = action.payload.token;
         },
         logoutAction: (state) => {
-            state.isLogin = false;
-            // state.user = null;
-            // state.token = null;
+            state.islogin = false;
+            // state.user = "";
+            // state.token = "";
         }
     }
 });
