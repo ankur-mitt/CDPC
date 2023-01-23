@@ -1,7 +1,6 @@
 import axios from "axios";
-import React from "react";
 
-export const login_api = (email: string, password: string) => {
+export const loginApi = (email: string, password: string) => {
     const response = axios.post("http://localhost:3000/api/login", {
         email,
         password
@@ -9,7 +8,7 @@ export const login_api = (email: string, password: string) => {
     return response;
 };
 
-export const signup_api = (
+export const signUpApi = (
     name: string,
     email: string,
     phone_num: string,

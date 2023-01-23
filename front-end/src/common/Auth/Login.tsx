@@ -1,36 +1,33 @@
 import { Button, FormControl, FormLabel, Input } from "@chakra-ui/react";
 import { useState } from "react";
 
-import { useAppDispatch, useAppSelector } from "../../app/hooks";
-import { loginAction, selectlogin } from "../../features/login/loginSlice";
+import { useAppDispatch } from "../../app/hooks";
+import { loginAction } from "../../features/login/loginSlice";
 
 export const Login = () => {
-    const [Userdetails, setUserdetails] = useState({ email: "", password: "" });
+    const [userdetails, setUserdetails] = useState({ email: "", password: "" });
 
     const dispatch = useAppDispatch();
 
-    const login = useAppSelector(selectlogin);
 
-    const handlechange = (e: any) => {
-        setUserdetails({ ...Userdetails, [e.target.type]: e.target.value });
+    const handleChange = (e: any) => {
+        setUserdetails({ ...userdetails, [e.target.type]: e.target.value });
     };
 
     const handleSubmit = (e: any) => {
-        console.log(login);
         dispatch(loginAction());
-        console.log(login);
     };
 
     return (
         <div>
             <FormControl>
                 <FormLabel>Email address</FormLabel>
-                <Input type="email" onChange={handlechange} />
+                <Input type="email" onChange={handleChange} />
             </FormControl>
 
             <FormControl>
                 <FormLabel>password</FormLabel>
-                <Input type="password" onChange={handlechange} />
+                <Input type="password" onChange={handleChange} />
             </FormControl>
 
             <Button colorScheme="blue" onClick={handleSubmit}>
