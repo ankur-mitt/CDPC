@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 import { RootState } from "../../app/store";
-import { LoginType } from "../../types/logintype";
+import { LoginType } from "../../types/login";
 
 const initialState: LoginType = {
     islogin: false,
@@ -22,7 +22,7 @@ export const loginSlice = createSlice({
     }
 });
 
-export const selectlogin = (state: RootState) => state.login.islogin;
+export const selectLogin = (state: RootState) => state.login.islogin;
 
 export const { loginAction, logoutAction } = loginSlice.actions;
 
