@@ -5,16 +5,16 @@ import { useAppDispatch } from "../../app/hooks";
 import { loginAction } from "../../features/login/loginSlice";
 
 export const Login = () => {
-    const [userdetails, setUserdetails] = useState({ email: "", password: "" });
+    const [userDetails, setUserDetails] = useState({ email: "", password: "" });
 
     const dispatch = useAppDispatch();
 
 
-    const handleChange = (e: any) => {
-        setUserdetails({ ...userdetails, [e.target.type]: e.target.value });
+    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setUserDetails({ ...userDetails, [event.target.type]: event.target.value });
     };
 
-    const handleSubmit = (e: any) => {
+    const handleSubmit = () => {
         dispatch(loginAction());
     };
 
@@ -31,7 +31,7 @@ export const Login = () => {
             </FormControl>
 
             <Button colorScheme="blue" onClick={handleSubmit}>
-                Button
+                Log In
             </Button>
         </div>
     );

@@ -3,46 +3,45 @@ import { useState } from "react";
 
 
 export const SignUp = () => {
-    const [Userdetails, setUserdetails] = useState({
+    const [userDetails, setUserDetails] = useState({
         name: "",
         email: "",
-        mobile_num: "",
+        mobileNum: "",
         password: ""
     });
 
-    const handlechange = (e: any) => {
-        setUserdetails({ ...Userdetails, [e.target.type]: e.target.value });
+    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setUserDetails({ ...userDetails, [event.target.type]: event.target.value });
     };
 
-    const handleSubmit = (e: any) => {
-        e.preventDefault();
-        console.log(Userdetails);
+    const handleSubmit = () => {
+        console.log(userDetails);
     };
 
     return (
         <div>
             <FormControl>
                 <FormLabel>Name</FormLabel>
-                <Input type="name" onChange={handlechange} />
+                <Input type="name" onChange={handleChange} />
             </FormControl>
 
             <FormControl>
                 <FormLabel>Email Address</FormLabel>
-                <Input type="email" onChange={handlechange} />
+                <Input type="email" onChange={handleChange} />
             </FormControl>
 
             <FormControl>
                 <FormLabel>Mobile Number</FormLabel>
-                <Input type="mobile_num" onChange={handlechange} />
+                <Input type="mobileNum" onChange={handleChange} />
             </FormControl>
 
             <FormControl>
-                <FormLabel>password</FormLabel>
-                <Input type="password" onChange={handlechange} />
+                <FormLabel>Password</FormLabel>
+                <Input type="password" onChange={handleChange} />
             </FormControl>
 
             <Button colorScheme="blue" onClick={handleSubmit}>
-                Button
+                Sign Up
             </Button>
         </div>
     );

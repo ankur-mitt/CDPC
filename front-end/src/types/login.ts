@@ -1,5 +1,5 @@
 interface LoginType {
-    islogin: boolean;
+    isLogin: boolean;
     user: String;
     token: String;
 }
